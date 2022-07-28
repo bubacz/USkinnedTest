@@ -1,0 +1,14 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: var(--brand-carbon);
+	font-family: var(--font-main);
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+@import "headings";
+@import "copy";

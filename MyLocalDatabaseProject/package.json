@@ -1,0 +1,78 @@
+{
+  "name": "MyLocalDatabaseProject",
+  "version": "1.0.0",
+  "description": "Node scripts and NPMs for compiling and linting js/css files.",
+  "main": "",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "clean:css": "rimraf wwwroot/css/dist/{*.css,*.css.map}",
+    "clean:js": "rimraf wwwroot/scripts/dist/{*.js,*.js.map}",
+    "clean": "run-s clean:*",
+    "scss": "sass --update --style=compressed wwwroot/css/src/scss:wwwroot/css/dist",
+    "lint": "eslint wwwroot/scripts/src/js || true && eslint wwwroot/scripts/src/**/*.js || true",
+    "stylelint": "stylelint \"wwwroot/css/src/scss/**/*.scss\"; exit 0",
+    "babel": "npx babel wwwroot/scripts/src/js/*.js --out-file wwwroot/scripts/dist/app.js --source-maps",
+    "build:css": "run-s scss",
+    "build:js": "run-s lint babel",
+    "build": "run-s build:*",
+    "watch:css": "onchange \"wwwroot/css/src/scss/**/*.scss\" -- run-s clean:css build:css",
+    "watch:js": "onchange \"wwwroot/scripts/src/js/**/*.js\" -- run-s clean:js build:js",
+    "watch": "run-p watch:*"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "dir-archiver": "^1.2.0",
+    "eslint": "^8.18.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^10.0.0",
+    "rfs": "^9.0.6",
+    "rimraf": "^3.0.2",
+    "sass": "^1.53.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-no-unsupported-browser-features": "^5.0.3"
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-no-unsupported-browser-features"
+    ],
+    "extends": [
+      "stylelint-config-standard-scss"
+    ],
+    "rules": {
+      "indentation": "tab",
+      "plugin/no-unsupported-browser-features": [
+        true,
+        {
+          "browsers": [
+            "last 2 chrome versions",
+            "last 2 firefox versions",
+            "last 2 safari versions"
+          ],
+          "ignore": [
+            "rem"
+          ],
+          "ignorePartialSupport": true
+        }
+      ]
+    },
+    "defaultSeverity": "warning"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 safari versions"
+    ],
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 safari versions"
+    ]
+  }
+}

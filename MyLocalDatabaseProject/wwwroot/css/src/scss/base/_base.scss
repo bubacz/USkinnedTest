@@ -1,0 +1,41 @@
+/* Normalize
+--------------------------------------------- */
+@import "normalize/normalize";
+
+/* Root Variables
+--------------------------------------------- */
+:root {
+	--brand-green: #759b21;
+	--brand-purple: #9b2175;
+	--brand-blue: #21759b;
+	--brand-light-blue: #2a95c5;
+	--brand-carbon: #1b1b1c;
+	--brand-dust: #f7f7f7;
+
+	// carbon variations
+	--carbon-800: #282728;
+	--carbon-700: #343436;
+	--carbon-600: #494949;
+	--carbon-500: #646569;
+	--carbon-400: #adadad;
+
+	// alert colors
+	--alert-danger: #f44336;
+	--alert-success: #4caf50;
+	--alert-info: #2196f3;
+	--alert-warning: #ff9800;
+
+	// font vars
+	--font-main: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	--font-pre: "Courier 10 Pitch", courier, monospace;
+
+	// used for max width of wrappers
+	--site-width: 1400px;
+
+	// Usage: transition: all var(--animation-average) var(--base-animation-easing);
+	--animation-fast: 100ms;
+	--animation-average: 300ms;
+	--animation-slow: 500ms;
+	--base-animation-easing: cubic-bezier(0.62, 0.01, 0.37, 0.99);
+}

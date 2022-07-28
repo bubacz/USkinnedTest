@@ -1,0 +1,155 @@
+// ===================================================================
+// Flexbox Grid Mixins
+// Version 0.2.1
+// Description: Sass Mixins to generate Flexbox grid
+// Author: thingsym
+// GitHub: https://github.com/thingsym/flexbox-grid-mixins
+// MIT License
+// ===================================================================
+
+@charset 'utf-8';
+@use "sass:math";
+@import "../../../../../node_modules/rfs/scss";
+
+// Hide Off Screen
+// Usage: @include hide-off-screen;
+// Position an element off-screen for screen-readers.
+@mixin hide-off-screen {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+// Position an element vertically and horizontally centered
+// Usage: @include absolute-center;
+// Note: parent element should use position: relative;
+@mixin absolute-center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+// Position an element vertically centered
+// Usage: @include vertical-center;
+// Note: parent element should use position: relative;
+@mixin vertical-center() {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Position an element horizontally centered
+// Usage: @include horizontal-center;
+// Note: parent element should use position: relative;
+@mixin horizontal-center() {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+// Special Underline for inline elements (better than text-decoration: underline)
+@mixin underline($bgcolor: get-color(charcoal)) {
+	background-image: linear-gradient(to right, $bgcolor 0%, $bgcolor 100%);
+	background-repeat: repeat-x;
+	background-position: 0 100%;
+	background-size: 100% 1px;
+}
+
+// Quantity Queries
+// Copied from: http://codepen.io/SitePoint/pen/ogaRBG
+@mixin quantity-query($number, $comparison: "equal") {
+	$nth: "";
+
+	@if index(("greater" "more" ">"), $comparison) {
+		$nth: "n + #{$number}";
+	} @else if index(("less" "fewer" "<"), $comparison) {
+		$nth: "-n + #{$number}";
+	} @else if index(("equal" "same" "="), $comparison) {
+		$nth: $number;
+	} @else {
+		@warn "Sorry, that's an invalid $comparison value.";
+	}
+
+	&:nth-last-child(#{$nth}):first-child {
+		&,
+		& ~ * {
+			@content;
+		}
+	}
+}
+
+@mixin qq-equal($number) {
+	@include quantity-query($number, equal) {
+		@content;
+	}
+}
+
+@mixin qq-greater($number) {
+	@include quantity-query($number, greater) {
+		@content;
+	}
+}
+
+@mixin qq-less($number) {
+	@include quantity-query($number, less) {
+		@content;
+	}
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+/// Strips the unit from a number.
+///
+/// @param {Number (With Unit)} $value
+///
+/// @example scss - Usage
+///   $dimension: strip-units(10em);
+///
+/// @example css - CSS Output
+///   $dimension: 10;
+///
+/// @return {Number (Unitless)}
+
+@function strip-units($value) {
+	@return math.div($value, $value * 0 + 1);
+}
+
+// Convert pixels to rems
+// eg. for a relational value of 12px write rem(12)
+// Assumes $em-base is the font-size of <html>
+$em-base: 16px !default;
+
+@function rem($pxval) {
+	@if not unitless($pxval) {
+		$pxval: strip-units($pxval);
+	}
+
+	$base: $em-base;
+
+	@if not unitless($base) {
+		$base: strip-units($base);
+	}
+
+	@return math.div($pxval, $base) * 1rem;
+}

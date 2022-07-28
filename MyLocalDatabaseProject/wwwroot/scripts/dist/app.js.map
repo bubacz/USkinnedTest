@@ -1,0 +1,1 @@
+{"version":3,"file":"app.js","names":["console","log"],"sources":["../src/js/test.js"],"sourcesContent":["(function() {\r\n    console.log(\"Scripts loaded.\")\r\n})();\r\n"],"mappings":";;AAAA,CAAC,YAAW;EACRA,OAAO,CAACC,GAAR,CAAY,iBAAZ;AACH,CAFD"}

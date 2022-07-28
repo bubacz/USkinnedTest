@@ -1,0 +1,8 @@
+﻿@inherits UmbracoViewPage<SiteBuilderBaseViewModel>
+@using USNSiteBuilder.Core.Models
+@{
+    int listingPageID = Convert.ToInt32(ViewData["listingPageID"]);
+    UsnlistingPage landing = (UsnlistingPage)Umbraco.Content(listingPageID);
+
+
+}
