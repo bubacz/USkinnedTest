@@ -9,17 +9,17 @@
   "scripts": {
     "clean:css": "rimraf wwwroot/css/dist/{*.css,*.css.map}",
     "clean:js": "rimraf wwwroot/scripts/dist/{*.js,*.js.map}",
-    "clean": "run-s clean:*",
+    "clean": "run-s 'clean:*'",
     "scss": "sass --update --style=compressed wwwroot/css/src/scss:wwwroot/css/dist",
     "lint": "eslint wwwroot/scripts/src/js || true && eslint wwwroot/scripts/src/**/*.js || true",
     "stylelint": "stylelint \"wwwroot/css/src/scss/**/*.scss\"; exit 0",
     "babel": "npx babel wwwroot/scripts/src/js/*.js --out-file wwwroot/scripts/dist/app.js --source-maps",
     "build:css": "run-s scss",
     "build:js": "run-s lint babel",
-    "build": "run-s build:*",
+    "build": "run-s 'build:*'",
     "watch:css": "onchange \"wwwroot/css/src/scss/**/*.scss\" -- run-s clean:css build:css",
     "watch:js": "onchange \"wwwroot/scripts/src/js/**/*.js\" -- run-s clean:js build:js",
-    "watch": "run-p watch:*"
+    "watch": "run-p 'watch:*'"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
