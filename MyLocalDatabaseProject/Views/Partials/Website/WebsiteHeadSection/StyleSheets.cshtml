@@ -157,6 +157,10 @@
     SmidgeHelper
     .CreateCssBundle("sitebuilder-css-prnt-bundle")
     .RequiresCss("/css/" + Model.ThemeFolder + "/print.css");
+
+    SmidgeHelper
+    .CreateCssBundle("custom-css-bundle")
+    .RequiresCss("/css/dist/styles.css");
 }
 
 <environment names="Development">
@@ -176,6 +180,7 @@ else
 <link rel="stylesheet" href="sitebuilder-css-small-bundle" media="@smallMedia" debug="true"/>
 <link rel="stylesheet" href="sitebuilder-css-large-bundle" media="@largeMedia" debug="true"/>
 <link rel="stylesheet" href="sitebuilder-css-prnt-bundle" media="print" debug="true"/>
+<link rel="stylesheet" href="custom-css-bundle" debug="true"/>
 @if (UmbracoContext.InPreviewMode)
 {
     <link rel="stylesheet" href="sitebuilder-css-preview-bundle" media="screen" debug="true"/>
