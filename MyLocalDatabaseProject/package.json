@@ -1,5 +1,6 @@
 {
   "name": "MyLocalDatabaseProject",
+  "packageManager": "yarn@3.2.2",
   "version": "1.0.0",
   "description": "Node scripts and NPMs for compiling and linting js/css files.",
   "main": "",
