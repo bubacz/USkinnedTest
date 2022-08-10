@@ -33,7 +33,7 @@ Contents
     /* Generic palette */
     --true-black:0,0,0;
     --true-white:255,255,255;
-    --form-errors:144,62,60;
+    --form-errors:193,108,107;
     --form-warning:240,173,78;
     --form-success:92,184,92;
 
@@ -1030,10 +1030,6 @@ Additional Colors - Buttons
 
 html.no-touch .c1-bg .slick-slider .slick-prev:hover, html.no-touch .c1-bg .slick-slider .slick-next:hover { color: rgba(var(--c1-link-hover), 1); }
 
-.c1-bg .slick-slider .slick-autoplay-toggle-button { color: rgba(var(--c1-link), 1); background-color: rgba(var(--c1-bg-color1), 1); }
-
-html.no-touch .c1-bg .slick-slider .slick-autoplay-toggle-button:hover { color: rgba(var(--c1-link-hover), 1); }
-
 .c1-bg .slick-slider .slick-dots li > button { background-color: rgba(var(--c1-text), 1); }
 
 html.no-touch .c1-bg .slick-slider .slick-dots li:not(.slick-active) > button:hover { background-color: rgba(var(--c1-link-hover), 1); }
@@ -1097,13 +1093,13 @@ html.no-touch .c1-bg .slick-slider .slick-dots li:not(.slick-active) > button:ho
 
 
 /* Anchor Navigtation */
-.component.usn_cmp_anchornavigation.c1-bg .expand-anchor { color: rgba(var(--c1-heading), 1); }
+.component.usn_cmp_anchornavigation.c1-bg .expand { color: rgba(var(--c1-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c1-bg .expand-anchor span:before { background: rgba(var(--c1-heading), 1); }
+.component.usn_cmp_anchornavigation.c1-bg .expand span:before { background: rgba(var(--c1-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c1-bg .expand-anchor span { background: rgba(var(--c1-heading), 1); }
+.component.usn_cmp_anchornavigation.c1-bg .expand span { background: rgba(var(--c1-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c1-bg .expand-anchor span:after { background: rgba(var(--c1-heading), 1); }
+.component.usn_cmp_anchornavigation.c1-bg .expand span:after { background: rgba(var(--c1-heading), 1); }
 
 
 /* Basic */
@@ -1157,9 +1153,9 @@ html.no-touch .c1-bg .slick-slider .slick-dots li:not(.slick-active) > button:ho
 
 
 /* Scroll prompt */
-.c1-bg .scroll-prompt .scroll-link { color: rgba(var(--c1-heading), 1); }
+.c1-bg .scroll-prompt a { color: rgba(var(--c1-heading), 1); }
 
-.c1-bg .scroll-prompt .scroll-link i { color: rgba(var(--c1-heading), 1); }
+.c1-bg .scroll-prompt a i { color: rgba(var(--c1-heading), 1); }
 
 .c1-bg .scroll-prompt.scroll-prompt-wheel .mouse-scroll { border-color: rgba(var(--c1-heading), 1); }
 
@@ -1197,74 +1193,6 @@ html#ecwid_html.usn body#ecwid_body .c1-bg .ec-size .ec-store .grid-product__tit
 
 .inner.c1-bg .heading::after, .inner.c1-bg .secondary-heading::after { background: rgba(var(--c1-highlight), 1); }
 
-
-/* Overlayicons */
-
-.item.item_text-boxed.c1-bg .image .overlayicon::before,
-.item.item_text-boxed .inner.c1-bg .image .overlayicon::before,
-.item.item_text-boxed .image.c1-bg .overlayicon::before { 
-    background: rgba(var(--c1-bg), 1);
-}
-
-/* Overlayicons - Backgrounds Linear */
-
-.item.item_text-boxed.c1-bg.c1-bg-linear .image .overlayicon::before,
-.item.item_text-boxed .inner.c1-bg.c1-bg-linear .image .overlayicon::before,
-.item.item_text-boxed .image.c1-bg.c1-bg-linear .overlayicon::before { 
-    background: linear-gradient(var(--c1-bg-angle), rgba(var(--c1-bg-color1), 1) 0%, rgba(var(--c1-bg-color2), 1) 100%); 
-}
-
-/* Overlayicons - Backgrounds Radial */
-
-.item.item_text-boxed.c1-bg.c1-bg-radial .image .overlayicon::before,
-.item.item_text-boxed .inner.c1-bg.c1-bg-radial .image .overlayicon::before,
-.item.item_text-boxed .image.c1-bg.c1-bg-radial .overlayicon::before { 
-    background: radial-gradient(farthest-side at var(--c1-bg-start-perc) var(--c1-bg-stop-perc), rgba(var(--c1-bg-color1), 1) 0%, rgba(var(--c1-bg-color2), 1) 100%); 
-}
-
-.item.item_text-boxed.c1-bg .image .overlayicon .icon,
-.item.item_text-boxed .inner.c1-bg .image .overlayicon .icon,
-.item.item_text-boxed .image.c1-bg .overlayicon .icon {
-    color: rgba(var(--c1-heading), 1);
-}
-
-
-/* Focus visibles */
-
-.c1-bg a:focus-visible,
-.c1-bg .btn:focus-visible,
-.c1-bg button:focus-visible,
-.form .inner.c1-bg a:focus-visible,
-.form .inner.c1-bg .btn:focus-visible,
-.form .inner.c1-bg button:focus-visible, 
-.c1-bg .item .image a:focus-visible, 
-.c1-bg .item .image a:focus-visible img, 
-.c1-bg .item .image a:focus-visible picture,
-.c1-bg .item .image a:focus-visible .overlayicon,
-.c1-bg .listing_no-spacing .item a:focus-visible .image, 
-.c1-bg .listing_no-spacing .item a:focus-visible .image img, 
-.c1-bg .listing_no-spacing .item a:focus-visible .image picture,
-.c1-bg .listing_no-spacing .item a:focus-visible .image .overlayicon,
-.item.item_text-boxed .inner.c1-bg a:focus-visible .image, 
-.item.item_text-boxed .inner.c1-bg a:focus-visible .image::before,
-.item.item_text-boxed .inner.c1-bg a:focus-visible .image img, 
-.item.item_text-boxed .inner.c1-bg a:focus-visible .image picture,
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c1-bg, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c1-bg::before, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c1-bg img, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c1-bg picture,
-main:focus-visible > section.c1-bg:first-of-type, 
-section.c1-bg:focus-visible  {
-    outline-color: rgba(var(--c1-highlight), 1)!important;
-}
-
-.c1-bg .form-control:focus-visible,
-.form .inner.c1-bg .form-control:focus-visible,
-.form .inner.c1-bg .umbraco-forms-field input:focus-visible,
-.form .inner.c1-bg .umbraco-forms-field.longanswer textarea:focus-visible,
-.form .inner.c1-bg .umbraco-forms-field.dropdown select:focus-visible {
-    outline-color: rgba(var(--c1-highlight), 1)!important;
-}
 
 
 /*	
@@ -1506,10 +1434,6 @@ Additional Colors - Buttons
 
 html.no-touch .c2-bg .slick-slider .slick-prev:hover, html.no-touch .c2-bg .slick-slider .slick-next:hover { color: rgba(var(--c2-link-hover), 1); }
 
-.c2-bg .slick-slider .slick-autoplay-toggle-button { color: rgba(var(--c2-link), 1); background-color: rgba(var(--c2-bg-color1), 1); }
-
-html.no-touch .c2-bg .slick-slider .slick-autoplay-toggle-button:hover { color: rgba(var(--c2-link-hover), 1); }
-
 .c2-bg .slick-slider .slick-dots li > button { background-color: rgba(var(--c2-text), 1); }
 
 html.no-touch .c2-bg .slick-slider .slick-dots li:not(.slick-active) > button:hover { background-color: rgba(var(--c2-link-hover), 1); }
@@ -1573,13 +1497,13 @@ html.no-touch .c2-bg .slick-slider .slick-dots li:not(.slick-active) > button:ho
 
 
 /* Anchor Navigtation */
-.component.usn_cmp_anchornavigation.c2-bg .expand-anchor { color: rgba(var(--c2-heading), 1); }
+.component.usn_cmp_anchornavigation.c2-bg .expand { color: rgba(var(--c2-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c2-bg .expand-anchor span:before { background: rgba(var(--c2-heading), 1); }
+.component.usn_cmp_anchornavigation.c2-bg .expand span:before { background: rgba(var(--c2-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c2-bg .expand-anchor span { background: rgba(var(--c2-heading), 1); }
+.component.usn_cmp_anchornavigation.c2-bg .expand span { background: rgba(var(--c2-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c2-bg .expand-anchor span:after { background: rgba(var(--c2-heading), 1); }
+.component.usn_cmp_anchornavigation.c2-bg .expand span:after { background: rgba(var(--c2-heading), 1); }
 
 
 /* Basic */
@@ -1633,9 +1557,9 @@ html.no-touch .c2-bg .slick-slider .slick-dots li:not(.slick-active) > button:ho
 
 
 /* Scroll prompt */
-.c2-bg .scroll-prompt .scroll-link { color: rgba(var(--c2-heading), 1); }
+.c2-bg .scroll-prompt a { color: rgba(var(--c2-heading), 1); }
 
-.c2-bg .scroll-prompt .scroll-link i { color: rgba(var(--c2-heading), 1); }
+.c2-bg .scroll-prompt a i { color: rgba(var(--c2-heading), 1); }
 
 .c2-bg .scroll-prompt.scroll-prompt-wheel .mouse-scroll { border-color: rgba(var(--c2-heading), 1); }
 
@@ -1673,74 +1597,6 @@ html#ecwid_html.usn body#ecwid_body .c2-bg .ec-size .ec-store .grid-product__tit
 
 .inner.c2-bg .heading::after, .inner.c2-bg .secondary-heading::after { background: rgba(var(--c2-highlight), 1); }
 
-
-/* Overlayicons */
-
-.item.item_text-boxed.c2-bg .image .overlayicon::before,
-.item.item_text-boxed .inner.c2-bg .image .overlayicon::before,
-.item.item_text-boxed .image.c2-bg .overlayicon::before { 
-    background: rgba(var(--c2-bg), 1);
-}
-
-/* Overlayicons - Backgrounds Linear */
-
-.item.item_text-boxed.c2-bg.c2-bg-linear .image .overlayicon::before,
-.item.item_text-boxed .inner.c2-bg.c2-bg-linear .image .overlayicon::before,
-.item.item_text-boxed .image.c2-bg.c2-bg-linear .overlayicon::before { 
-    background: linear-gradient(var(--c2-bg-angle), rgba(var(--c2-bg-color1), 1) 0%, rgba(var(--c2-bg-color2), 1) 100%); 
-}
-
-/* Overlayicons - Backgrounds Radial */
-
-.item.item_text-boxed.c2-bg.c2-bg-radial .image .overlayicon::before,
-.item.item_text-boxed .inner.c2-bg.c2-bg-radial .image .overlayicon::before,
-.item.item_text-boxed .image.c2-bg.c2-bg-radial .overlayicon::before { 
-    background: radial-gradient(farthest-side at var(--c2-bg-start-perc) var(--c2-bg-stop-perc), rgba(var(--c2-bg-color1), 1) 0%, rgba(var(--c2-bg-color2), 1) 100%); 
-}
-
-.item.item_text-boxed.c2-bg .image .overlayicon .icon,
-.item.item_text-boxed .inner.c2-bg .image .overlayicon .icon,
-.item.item_text-boxed .image.c2-bg .overlayicon .icon {
-    color: rgba(var(--c2-heading), 1);
-}
-
-
-/* Focus visibles */
-
-.c2-bg a:focus-visible,
-.c2-bg .btn:focus-visible,
-.c2-bg button:focus-visible,
-.form .inner.c2-bg a:focus-visible,
-.form .inner.c2-bg .btn:focus-visible,
-.form .inner.c2-bg button:focus-visible, 
-.c2-bg .item .image a:focus-visible, 
-.c2-bg .item .image a:focus-visible img, 
-.c2-bg .item .image a:focus-visible picture,
-.c2-bg .item .image a:focus-visible .overlayicon,
-.c2-bg .listing_no-spacing .item a:focus-visible .image, 
-.c2-bg .listing_no-spacing .item a:focus-visible .image img, 
-.c2-bg .listing_no-spacing .item a:focus-visible .image picture,
-.c2-bg .listing_no-spacing .item a:focus-visible .image .overlayicon,
-.item.item_text-boxed .inner.c2-bg a:focus-visible .image, 
-.item.item_text-boxed .inner.c2-bg a:focus-visible .image::before,
-.item.item_text-boxed .inner.c2-bg a:focus-visible .image img, 
-.item.item_text-boxed .inner.c2-bg a:focus-visible .image picture,
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c2-bg, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c2-bg::before, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c2-bg img, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c2-bg picture,
-main:focus-visible > section.c2-bg:first-of-type, 
-section.c2-bg:focus-visible  {
-    outline-color: rgba(var(--c2-highlight), 1)!important;
-}
-
-.c2-bg .form-control:focus-visible,
-.form .inner.c2-bg .form-control:focus-visible,
-.form .inner.c2-bg .umbraco-forms-field input:focus-visible,
-.form .inner.c2-bg .umbraco-forms-field.longanswer textarea:focus-visible,
-.form .inner.c2-bg .umbraco-forms-field.dropdown select:focus-visible {
-    outline-color: rgba(var(--c2-highlight), 1)!important;
-}
 
 
 /*	
@@ -1982,10 +1838,6 @@ Additional Colors - Buttons
 
 html.no-touch .c3-bg .slick-slider .slick-prev:hover, html.no-touch .c3-bg .slick-slider .slick-next:hover { color: rgba(var(--c3-link-hover), 1); }
 
-.c3-bg .slick-slider .slick-autoplay-toggle-button { color: rgba(var(--c3-link), 1); background-color: rgba(var(--c3-bg-color1), 1); }
-
-html.no-touch .c3-bg .slick-slider .slick-autoplay-toggle-button:hover { color: rgba(var(--c3-link-hover), 1); }
-
 .c3-bg .slick-slider .slick-dots li > button { background-color: rgba(var(--c3-text), 1); }
 
 html.no-touch .c3-bg .slick-slider .slick-dots li:not(.slick-active) > button:hover { background-color: rgba(var(--c3-link-hover), 1); }
@@ -2049,13 +1901,13 @@ html.no-touch .c3-bg .slick-slider .slick-dots li:not(.slick-active) > button:ho
 
 
 /* Anchor Navigtation */
-.component.usn_cmp_anchornavigation.c3-bg .expand-anchor { color: rgba(var(--c3-heading), 1); }
+.component.usn_cmp_anchornavigation.c3-bg .expand { color: rgba(var(--c3-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c3-bg .expand-anchor span:before { background: rgba(var(--c3-heading), 1); }
+.component.usn_cmp_anchornavigation.c3-bg .expand span:before { background: rgba(var(--c3-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c3-bg .expand-anchor span { background: rgba(var(--c3-heading), 1); }
+.component.usn_cmp_anchornavigation.c3-bg .expand span { background: rgba(var(--c3-heading), 1); }
 
-.component.usn_cmp_anchornavigation.c3-bg .expand-anchor span:after { background: rgba(var(--c3-heading), 1); }
+.component.usn_cmp_anchornavigation.c3-bg .expand span:after { background: rgba(var(--c3-heading), 1); }
 
 
 /* Basic */
@@ -2109,9 +1961,9 @@ html.no-touch .c3-bg .slick-slider .slick-dots li:not(.slick-active) > button:ho
 
 
 /* Scroll prompt */
-.c3-bg .scroll-prompt .scroll-link { color: rgba(var(--c3-heading), 1); }
+.c3-bg .scroll-prompt a { color: rgba(var(--c3-heading), 1); }
 
-.c3-bg .scroll-prompt .scroll-link i { color: rgba(var(--c3-heading), 1); }
+.c3-bg .scroll-prompt a i { color: rgba(var(--c3-heading), 1); }
 
 .c3-bg .scroll-prompt.scroll-prompt-wheel .mouse-scroll { border-color: rgba(var(--c3-heading), 1); }
 
@@ -2149,74 +2001,6 @@ html#ecwid_html.usn body#ecwid_body .c3-bg .ec-size .ec-store .grid-product__tit
 
 .inner.c3-bg .heading::after, .inner.c3-bg .secondary-heading::after { background: rgba(var(--c3-highlight), 1); }
 
-
-/* Overlayicons */
-
-.item.item_text-boxed.c3-bg .image .overlayicon::before,
-.item.item_text-boxed .inner.c3-bg .image .overlayicon::before,
-.item.item_text-boxed .image.c3-bg .overlayicon::before { 
-    background: rgba(var(--c3-bg), 1);
-}
-
-/* Overlayicons - Backgrounds Linear */
-
-.item.item_text-boxed.c3-bg.c3-bg-linear .image .overlayicon::before,
-.item.item_text-boxed .inner.c3-bg.c3-bg-linear .image .overlayicon::before,
-.item.item_text-boxed .image.c3-bg.c3-bg-linear .overlayicon::before { 
-    background: linear-gradient(var(--c3-bg-angle), rgba(var(--c3-bg-color1), 1) 0%, rgba(var(--c3-bg-color2), 1) 100%); 
-}
-
-/* Overlayicons - Backgrounds Radial */
-
-.item.item_text-boxed.c3-bg.c3-bg-radial .image .overlayicon::before,
-.item.item_text-boxed .inner.c3-bg.c3-bg-radial .image .overlayicon::before,
-.item.item_text-boxed .image.c3-bg.c3-bg-radial .overlayicon::before { 
-    background: radial-gradient(farthest-side at var(--c3-bg-start-perc) var(--c3-bg-stop-perc), rgba(var(--c3-bg-color1), 1) 0%, rgba(var(--c3-bg-color2), 1) 100%); 
-}
-
-.item.item_text-boxed.c3-bg .image .overlayicon .icon,
-.item.item_text-boxed .inner.c3-bg .image .overlayicon .icon,
-.item.item_text-boxed .image.c3-bg .overlayicon .icon {
-    color: rgba(var(--c3-heading), 1);
-}
-
-
-/* Focus visibles */
-
-.c3-bg a:focus-visible,
-.c3-bg .btn:focus-visible,
-.c3-bg button:focus-visible,
-.form .inner.c3-bg a:focus-visible,
-.form .inner.c3-bg .btn:focus-visible,
-.form .inner.c3-bg button:focus-visible, 
-.c3-bg .item .image a:focus-visible, 
-.c3-bg .item .image a:focus-visible img, 
-.c3-bg .item .image a:focus-visible picture,
-.c3-bg .item .image a:focus-visible .overlayicon,
-.c3-bg .listing_no-spacing .item a:focus-visible .image, 
-.c3-bg .listing_no-spacing .item a:focus-visible .image img, 
-.c3-bg .listing_no-spacing .item a:focus-visible .image picture,
-.c3-bg .listing_no-spacing .item a:focus-visible .image .overlayicon,
-.item.item_text-boxed .inner.c3-bg a:focus-visible .image, 
-.item.item_text-boxed .inner.c3-bg a:focus-visible .image::before,
-.item.item_text-boxed .inner.c3-bg a:focus-visible .image img, 
-.item.item_text-boxed .inner.c3-bg a:focus-visible .image picture,
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c3-bg, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c3-bg::before, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c3-bg img, 
-.usn_cmp_windows .item.item_text-boxed a:focus-visible .image.c3-bg picture,
-main:focus-visible > section.c3-bg:first-of-type, 
-section.c3-bg:focus-visible  {
-    outline-color: rgba(var(--c3-highlight), 1)!important;
-}
-
-.c3-bg .form-control:focus-visible,
-.form .inner.c3-bg .form-control:focus-visible,
-.form .inner.c3-bg .umbraco-forms-field input:focus-visible,
-.form .inner.c3-bg .umbraco-forms-field.longanswer textarea:focus-visible,
-.form .inner.c3-bg .umbraco-forms-field.dropdown select:focus-visible {
-    outline-color: rgba(var(--c3-highlight), 1)!important;
-}
 
 
 
@@ -2404,17 +2188,6 @@ a:active .btn.c1-btn-text {
 }
 
 
-/* Umbraco Form input submit button hovers */
-/* Required so we do not change the HTML of Umbraco Forms source */
-.umbraco-forms .btn-bg_c1-btn-bg input[type="submit"]:active,
-.umbraco-forms .btn-bg_c1-btn-bg input[type="submit"]:focus,
-.umbraco-forms .btn-bg_c1-btn-bg input[type="submit"]:hover { 
-    background: rgba(var(--c1-btn-bg-hover-color1),1);
-    background: linear-gradient(var(--c1-btn-bg-hover-angle), rgba(var(--c1-btn-bg-hover-color1), 1) 0%, rgba(var(--c1-btn-bg-hover-color2), 1) 100%); 
-    color: rgba(var(--c1-btn-text-hover),1);
-    border-color: rgba(var(--c1-btn-borders-hover),1);
-}
-
 
 /*	
 --------------------------------------------------
@@ -2599,17 +2372,6 @@ a:active .btn.c2-btn-text {
 }
 
 
-/* Umbraco Form input submit button hovers */
-/* Required so we do not change the HTML of Umbraco Forms source */
-.umbraco-forms .btn-bg_c2-btn-bg input[type="submit"]:active,
-.umbraco-forms .btn-bg_c2-btn-bg input[type="submit"]:focus,
-.umbraco-forms .btn-bg_c2-btn-bg input[type="submit"]:hover { 
-    background: rgba(var(--c2-btn-bg-hover-color1),1);
-    background: linear-gradient(var(--c2-btn-bg-hover-angle), rgba(var(--c2-btn-bg-hover-color1), 1) 0%, rgba(var(--c2-btn-bg-hover-color2), 1) 100%); 
-    color: rgba(var(--c2-btn-text-hover),1);
-    border-color: rgba(var(--c2-btn-borders-hover),1);
-}
-
 
 /*	
 --------------------------------------------------
@@ -2793,17 +2555,6 @@ a:active .btn.c3-btn-text {
     color: rgba(var(--c3-btn-bg-hover), 1); 
 }
 
-
-/* Umbraco Form input submit button hovers */
-/* Required so we do not change the HTML of Umbraco Forms source */
-.umbraco-forms .btn-bg_c3-btn-bg input[type="submit"]:active,
-.umbraco-forms .btn-bg_c3-btn-bg input[type="submit"]:focus,
-.umbraco-forms .btn-bg_c3-btn-bg input[type="submit"]:hover { 
-    background: rgba(var(--c3-btn-bg-hover-color1),1);
-    background: linear-gradient(var(--c3-btn-bg-hover-angle), rgba(var(--c3-btn-bg-hover-color1), 1) 0%, rgba(var(--c3-btn-bg-hover-color2), 1) 100%); 
-    color: rgba(var(--c3-btn-text-hover),1);
-    border-color: rgba(var(--c3-btn-borders-hover),1);
-}
 
 
 
